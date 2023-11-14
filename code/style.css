@@ -1,0 +1,57 @@
+/* Reset some default margin and padding */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add some spacing around the accordion */
+.accordion {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Style the FAQ title */
+.title {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.title:hover {
+  background-color: #e0e0e0;
+}
+
+/* Style the active FAQ title */
+.title.active+.description {
+  background-color: #fdd4b2;
+  display: block;
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Style the FAQ description */
+.description {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 5px 0;
+  display: none;
+  /* Initially hide descriptions */
+}
